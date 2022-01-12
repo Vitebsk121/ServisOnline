@@ -2,6 +2,7 @@ import { AppReducerActions, IAppReducerActionsTypes, IAppReducerState } from '..
 
 const initialState: IAppReducerState = {
   menuIsOpen: false,
+  backDropIsOpen: false,
 };
 
 const appReducer = (state = initialState, action: IAppReducerActionsTypes): IAppReducerState => {
@@ -10,6 +11,10 @@ const appReducer = (state = initialState, action: IAppReducerActionsTypes): IApp
       return { ...state, menuIsOpen: true };
     case AppReducerActions.MENU_CLOSE:
       return { ...state, menuIsOpen: false };
+    case AppReducerActions.BACKDROP_OPEN:
+      return { ...state, backDropIsOpen: true };
+    case AppReducerActions.BACKDROP_CLOSE:
+      return { ...state, backDropIsOpen: false };
     default:
       return state;
   }
