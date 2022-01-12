@@ -1,0 +1,26 @@
+.myButton {
+  margin: 0 5px;
+  padding: 5px 10px;
+  color: var(--font-color);
+  font-size: 0.8em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform .1s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.success {
+  background-color: var(--btn-succecc-background);
+}
+
+.secondary {
+  background-color: var(--btn-secondary-background);
+}
