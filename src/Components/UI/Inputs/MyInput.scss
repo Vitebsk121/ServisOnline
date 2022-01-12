@@ -1,0 +1,15 @@
+.myInput {
+  margin: 0 5px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: inherit;
+  font-size: 0.7em;
+  line-height: inherit;
+  transition: border-bottom-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: rgb(52, 75, 224);
+  }
+}
