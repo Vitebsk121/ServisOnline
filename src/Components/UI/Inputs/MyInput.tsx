@@ -2,18 +2,30 @@ import "./MyInput.scss";
 
 import React from "react";
 
-enum InputType {
-  STRING__TYPE = 'text',
-}
-
-type MyInputProps = {
-  type?: InputType,
-  placeholder?: string,
+type OrderInputProps = {
+  name: string
+  type: string
+  inputHandleChange: {(e: React.ChangeEvent<any>): void, <T_1=string | React.ChangeEvent<any>>(field: T_1): T_1 extends React.ChangeEvent<any> ? void : ((e: (string | React.ChangeEvent<any>)) => void)}
+  inputValue: string
+  placeholder: string
+  error?: string
 };
 
-const MyInput: React.FC<MyInputProps> = ({type = InputType.STRING__TYPE, placeholder = ''}: MyInputProps) => {
+const MyInput: React.FC<OrderInputProps> = ({name, type, inputHandleChange, inputValue, placeholder, error }: OrderInputProps) => {
   return (
-    <input type={type} className='myInput' placeholder={placeholder} />
+    <div className="input_wrapper">
+      <input
+      className="myInput"
+      id={name}
+      name={name}
+      type={type}
+      placeholder=' '
+      onChange={inputHandleChange}
+      value={inputValue}
+    />
+      <label className="input__msg">{error}</label>
+      <label className="input__placeholder">{placeholder}</label>
+    </div>
   );
 };
 

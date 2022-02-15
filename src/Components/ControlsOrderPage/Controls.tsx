@@ -22,6 +22,10 @@ const Controls: React.FC<ControlsProps> = (props: ControlsProps) => {
     backdropHandler()
   }
 
+  const inputHandler = () => {
+    console.log('123')
+  }
+
   return (
     <div className="controls">
       <MyButton
@@ -35,7 +39,9 @@ const Controls: React.FC<ControlsProps> = (props: ControlsProps) => {
         buttonText={'Фильтр'}
       />
       <div className="btnLine" />
-      <MyInput placeholder={'Поиск'} />
+      <div className="orders__search">
+        <MyInput name={'search'} type={'text'} inputHandleChange={inputHandler} inputValue={''} placeholder={'Поиск'} />
+      </div>
     </div>
   );
 };
