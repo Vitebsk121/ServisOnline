@@ -1,0 +1,9 @@
+.order__item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba(156, 184, 230, 0.3);
+  }
+}
