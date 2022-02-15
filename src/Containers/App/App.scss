@@ -1,9 +1,14 @@
 .mainTheme {
   --font-color: white;
+  --font-color-secondary: black;
+  --font-color-warning: red;
   --background-dark: rgb(48,54,51);
   --background-blue: rgb(126, 162, 170);
   --btn-succecc-background: rgb(30, 153, 114);
   --btn-secondary-background: rgb(136, 141, 167);
+  --btn-error-background: rgb(156, 122, 151);
+  --table-font-size: calc( (100vw - 320px)/(1920 - 320) * (20 - 12) + 12px);
+  --background-light-blue: rgb(126, 162, 190);
 }
 
 .app__wrapper {
