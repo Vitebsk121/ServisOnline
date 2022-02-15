@@ -1,0 +1,39 @@
+.orders__list__viewport {
+  padding: 0 10px;
+  overflow: hidden;
+}
+.orders__list__scroll {
+  box-shadow: 0 0 8px 0 rgba(34, 60, 80, 0.2);
+  overflow: auto;
+}
+
+.main_table {
+
+  border-collapse: collapse;
+  width: 100%;
+
+  * {
+    white-space: nowrap;
+    font-size: var(--table-font-size);
+  }
+
+  th,td {
+    text-align: center;
+    padding: 10px;
+  }
+
+  th {
+    color: var(--font-color);
+    background-color: var(--background-light-blue);
+  }
+}
+
+.secondary__table {
+
+  width: 100%;
+
+  &>th,td {
+    padding: 0;
+  }
+}
+
